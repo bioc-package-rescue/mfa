@@ -429,7 +429,7 @@ plot_mfa_trace <- function(m) {
   stopifnot(is(m, "mfa"))
   lp <- m$traces$lp_trace[,1]
   qplot(seq_along(lp), lp, geom = 'line') + 
-    geom_smooth(se = FALSE, method = "LOESS") +
+    geom_smooth(se = FALSE, method = "loess") +
     xlab("Iteration") + ylab("log-probability")
 }
 
